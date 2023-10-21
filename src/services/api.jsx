@@ -1,17 +1,20 @@
+import uuid from 'react-uuid';
+
 const callToApi = () => {
-  // Llamamos a la API
-  return fetch('https://swapi.dev/api/people/5') // Este 5 es el id de Leia Skywalker
+  return fetch(
+    'https://owen-wilson-wow-api.onrender.com/wows/random?results=50'
+  )
     .then((response) => response.json())
-    .then((response) => {
+    .then((data) => {
       // Cuando responde la API podemos limpiar los datos aquí
-      const result = {
-        name: response.name,
-        birthYear: response.birth_year,
-        height: response.height,
-        mass: response.mass,
-        eyeColor: response.eye_color,
-      };
-      return result;
+      const cleanScenes = data.map((scene) => ({
+        poster: scene.poster,
+        movie: scene.movie,
+        fullLine: scene.full_line,
+        year: scene.year,
+        id: uuid(),
+      }));
+      return cleanScenes;
     });
 };
 
