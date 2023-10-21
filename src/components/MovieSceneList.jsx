@@ -1,5 +1,4 @@
 import MovieSceneItem from './MovieSceneItem';
-import '../styles/movieSceneList.scss';
 
 function MovieSceneList({ scenes }) {
   const renderScenes = scenes.map((scene) => {
@@ -12,7 +11,7 @@ function MovieSceneList({ scenes }) {
 
   return (
     <>
-      <ul className='listScene'>{renderScenes}</ul>;
+      <ul className='listScene'>{renderScenes}</ul>
     </>
   );
 }
