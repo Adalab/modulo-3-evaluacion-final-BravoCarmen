@@ -12,6 +12,8 @@ const callToApi = () => {
         movie: scene.movie,
         fullLine: scene.full_line,
         year: scene.year,
+        director: scene.director,
+        audio: scene.audio,
         id: uuid(),
       }));
       return cleanScenes;

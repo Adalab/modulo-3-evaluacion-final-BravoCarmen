@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import callToApi from '../services/api';
 import ls from '../services/localStorage';
 //import PropTypes from "prop-types";
-// import { Link, Route, Routes } from "react-router-dom";
-//import { useLocation, matchPath } from "react-router";
+import { Route, Routes } from 'react-router-dom';
+import { useLocation, matchPath } from 'react-router';
 //import { useParams } from "react-router-dom";
 import Filters from './Filters';
 import MovieSceneList from './MovieSceneList';
@@ -57,20 +57,43 @@ const App = () => {
     return uniquesArray;
   };
 
+  //buscar la escena con el id de la ruta
+  const { pathname } = useLocation();
+  const routeData = matchPath('/scene/:id', pathname);
+  const sceneId = routeData !== null ? routeData.params.id : '';
+  const sceneData = scenes.find((scene) => scene.id === sceneId);
+
   return (
     <div>
       <header>
-        <Filters
-          movieFilter={movieFilter}
-          handleChangeMovie={handleChangeMovie}
-          yearFilter={yearFilter}
-          handleChangeYear={handleChangeYear}
-          years={getYears()}
-        />
+        <h1>WOWS titulo</h1>
       </header>
-      <section>
-        <MovieSceneList scenes={filterMovies} />
-      </section>
+      <main>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <>
+                <Filters
+                  movieFilter={movieFilter}
+                  handleChangeMovie={handleChangeMovie}
+                  yearFilter={yearFilter}
+                  handleChangeYear={handleChangeYear}
+                  years={getYears()}
+                />
+                <section>
+                  <MovieSceneList scenes={filterMovies} />
+                </section>
+              </>
+            }
+          />
+
+          <Route
+            path='/scene/:id'
+            element={<MovieSceneDetail scene={sceneData} />}
+          />
+        </Routes>
+      </main>
     </div>
   );
 };
