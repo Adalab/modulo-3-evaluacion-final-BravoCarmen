@@ -1,5 +1,24 @@
-.listScene {
+.list_scene {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 4rem;
+  justify-items: center;
+  align-items: center;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  padding-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }

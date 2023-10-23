@@ -11,7 +11,7 @@ function Filters({
   return (
     <>
       <h2>Filtrar por...</h2>
-      <form>
+      <form className='search-filter'>
         <FilterByMovie
           movieFilter={movieFilter}
           handleChangeMovie={handleChangeMovie}

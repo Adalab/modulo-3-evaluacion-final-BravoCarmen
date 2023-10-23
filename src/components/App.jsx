@@ -8,7 +8,6 @@ import { useLocation, matchPath } from 'react-router';
 //import { useParams } from "react-router-dom";
 import Filters from './Filters';
 import MovieSceneList from './MovieSceneList';
-import MovieSceneItem from './MovieSceneItem';
 import MovieSceneDetail from './MovieSceneDetail';
 import '../styles/App.scss';
 
@@ -23,6 +22,7 @@ const App = () => {
   useEffect(() => {
     if (scenes.length === 0) {
       callToApi().then((cleanScenes) => {
+        cleanScenes.sort((a, b) => a.movie.localeCompare(b.movie)); //ordena alfabeticamente
         setScenes(cleanScenes);
         ls.set('scenes', cleanScenes);
       });
@@ -68,21 +68,23 @@ const App = () => {
   return (
     <div>
       <header className='header'>
-        <h1>WOWS titulo</h1>
+        <h1>Owen Wilson "WOW"</h1>
       </header>
-      <main>
+      <main className='main'>
         <Routes>
           <Route
             path='/'
             element={
               <>
-                <Filters
-                  movieFilter={movieFilter}
-                  handleChangeMovie={handleChangeMovie}
-                  yearFilter={yearFilter}
-                  handleChangeYear={handleChangeYear}
-                  years={getYears()}
-                />
+                <section className='section_filters'>
+                  <Filters
+                    movieFilter={movieFilter}
+                    handleChangeMovie={handleChangeMovie}
+                    yearFilter={yearFilter}
+                    handleChangeYear={handleChangeYear}
+                    years={getYears()}
+                  />
+                </section>
                 {filterMovies.length > 0 ? (
                   <MovieSceneList scenes={filterMovies} />
                 ) : (
@@ -103,6 +105,7 @@ const App = () => {
             path='/scene/:id'
             element={<MovieSceneDetail scene={sceneData} />}
           />
+          <Route path='*' element={<p>La escena que buscas no existe</p>} />
         </Routes>
       </main>
     </div>

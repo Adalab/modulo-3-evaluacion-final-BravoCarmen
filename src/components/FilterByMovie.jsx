@@ -5,7 +5,7 @@ function FilterByMovie({ movieFilter, handleChangeMovie }) {
 
   return (
     <>
-      <label htmlFor='search_movie'>
+      <label htmlFor='search_movie' className='search-filter'>
         Título:
         <input
           type='text'

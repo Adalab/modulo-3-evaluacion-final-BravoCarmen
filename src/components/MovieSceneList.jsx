@@ -14,7 +14,7 @@ function MovieSceneList({ scenes }) {
 
   return (
     <>
-      <ul className='listScene'>{renderScenes}</ul>
+      <ul className='list_scene'>{renderScenes}</ul>
     </>
   );
 }
