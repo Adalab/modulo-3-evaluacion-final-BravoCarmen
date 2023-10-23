@@ -1,11 +1,14 @@
 import MovieSceneItem from './MovieSceneItem';
+import { Link } from 'react-router-dom';
 
 function MovieSceneList({ scenes }) {
   const renderScenes = scenes.map((scene) => {
     return (
-      <li key={scene.id}>
-        <MovieSceneItem scene={scene} />
-      </li>
+      <Link key={scene.id} to={'/scene/' + scene.id}>
+        <li key={scene.id}>
+          <MovieSceneItem scene={scene} />
+        </li>
+      </Link>
     );
   });
 

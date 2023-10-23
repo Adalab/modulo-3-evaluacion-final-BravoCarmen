@@ -38,7 +38,9 @@ const App = () => {
   };
 
   const filterMovies = scenes
-    .filter((scene) => scene.movie.toLowerCase().includes(movieFilter))
+    .filter((scene) =>
+      scene.movie.toLowerCase().includes(movieFilter.toLowerCase())
+    )
     .filter((scene) => {
       if (yearFilter === '') {
         return true;
@@ -65,7 +67,7 @@ const App = () => {
 
   return (
     <div>
-      <header>
+      <header className='header'>
         <h1>WOWS titulo</h1>
       </header>
       <main>
@@ -81,6 +83,15 @@ const App = () => {
                   handleChangeYear={handleChangeYear}
                   years={getYears()}
                 />
+                {filterMovies.length > 0 ? (
+                  <MovieSceneList scenes={filterMovies} />
+                ) : (
+                  <div>
+                    No hay ninguna película que coincida con la palabra '
+                    {movieFilter}'
+                  </div>
+                )}
+
                 <section>
                   <MovieSceneList scenes={filterMovies} />
                 </section>

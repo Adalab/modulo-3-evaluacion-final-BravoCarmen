@@ -13,19 +13,18 @@ function FilterByYear({ yearFilter, handleChangeYear, years }) {
 
   return (
     <>
-      <label htmlFor='search_year'>
-        <select
-          name='search_year'
-          id='search_year'
-          value={yearFilter}
-          onChange={handleSelect}
-        >
-          <option selected value=''>
-            All
-          </option>
-          {renderYearsOptions()}
-        </select>
-      </label>
+      <label htmlFor='search_year'>Año</label>
+      <select
+        name='search_year'
+        id='search_year'
+        value={yearFilter}
+        onChange={handleSelect}
+      >
+        <option selected value=''>
+          Todos
+        </option>
+        {renderYearsOptions()}
+      </select>
     </>
   );
 }

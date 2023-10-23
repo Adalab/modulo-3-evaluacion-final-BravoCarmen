@@ -10,6 +10,7 @@ function FilterByMovie({ movieFilter, handleChangeMovie }) {
         <input
           type='text'
           name='search_movie'
+          placeholder='¿Qué película buscas?'
           id='search_movie'
           value={movieFilter}
           onChange={handleInput}
