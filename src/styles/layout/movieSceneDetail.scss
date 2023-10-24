@@ -1,8 +1,15 @@
 .details {
   display: flex;
+  justify-content: center;
+  gap: 2rem;
 
   &__poster {
     width: 20rem;
     display: flex;
   }
+}
+
+.back {
+  display: flex;
+  justify-content: center;
 }

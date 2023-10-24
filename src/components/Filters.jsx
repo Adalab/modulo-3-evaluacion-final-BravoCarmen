@@ -10,8 +10,7 @@ function Filters({
 }) {
   return (
     <>
-      <h2>Filtrar por...</h2>
-      <form className='search-filter'>
+      <form className='filters'>
         <FilterByMovie
           movieFilter={movieFilter}
           handleChangeMovie={handleChangeMovie}

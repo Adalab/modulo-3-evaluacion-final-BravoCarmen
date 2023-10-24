@@ -1,8 +1,32 @@
-# React + Vite
+# Buscador de frases de Owen Wilson
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Es una página para buscar en qué escenas el actor Owen Wilson dijo su famoso "WOW". Puedes buscar por película o por año, o incluso por las dos. Al pulsas sobre una escena podrás saber más detalles.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) htmlFor Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) htmlFor Fast Refresh
+
+http://beta.adalab.es/modulo-3-evaluacion-final-BravoCarmen/
+
+
+## Instalación
+
+Puedes instalarte mi proyecto clonando mi repositorio. Usa con Open with Live Server para arrancarlo.
+
+
+
+## Documentación
+
+[Adalab](https://adalab.es/) y materiales del curso.
+
+
+## Construído con
+
+Visual Studio Code: Html, Css y JSX (React)
+
+
+## Autores
+
+- Carmen Bravo
+
+Gracias por verlo! :)
+
+(Faltan estilos)

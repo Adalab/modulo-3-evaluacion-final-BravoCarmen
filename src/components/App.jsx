@@ -10,6 +10,7 @@ import Filters from './Filters';
 import MovieSceneList from './MovieSceneList';
 import MovieSceneDetail from './MovieSceneDetail';
 import '../styles/App.scss';
+import wow from '../images/owenheader.jpg';
 
 const App = () => {
   // Estados
@@ -68,7 +69,9 @@ const App = () => {
   return (
     <div>
       <header className='header'>
-        <h1>Owen Wilson "WOW"</h1>
+        <h1>
+          <img className='header' src={wow} alt='' />
+        </h1>
       </header>
       <main className='main'>
         <Routes>

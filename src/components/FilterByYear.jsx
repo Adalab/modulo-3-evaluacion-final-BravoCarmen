@@ -13,7 +13,9 @@ function FilterByYear({ yearFilter, handleChangeYear, years }) {
 
   return (
     <>
-      <label htmlFor='search_year'>Año</label>
+      <label htmlFor='search_year' className='filters__year'>
+        Año
+      </label>
       <select
         name='search_year'
         id='search_year'

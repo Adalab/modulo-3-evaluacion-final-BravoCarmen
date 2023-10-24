@@ -1,17 +1,21 @@
 .header {
-  color: white;
-  padding-block: 4rem;
-  text-align: center;
-  font-size: 1.5rem;
-  background-color: green;
+  height: 22vh;
+  background-image: url('../../images/owenheader.jpg');
+  background-position: center;
+  background-color: #fded97;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 768px) {
-    font-size: 2.5rem;
+    height: 26vh;
   }
-  @media (min-width: 1200px) {
-    font-size: 3rem;
+  @media (min-width: 1024px) {
+    height: 30vh;
   }
 }
+
 .main {
-  background-color: white;
+  padding-top: 2rem;
+  background-color: #fff9d7;
 }
