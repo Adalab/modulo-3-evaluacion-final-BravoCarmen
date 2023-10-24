@@ -9,7 +9,7 @@ http://beta.adalab.es/modulo-3-evaluacion-final-BravoCarmen/
 
 ## Instalación
 
-Puedes instalarte mi proyecto clonando mi repositorio. Usa con Open with Live Server para arrancarlo.
+Puedes instalarte mi proyecto clonando mi repositorio. Usa npm run dev para arrancarlo.
 
 
 
