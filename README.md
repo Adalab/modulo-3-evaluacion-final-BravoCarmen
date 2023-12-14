@@ -23,4 +23,3 @@ Visual Studio Code: Html, Css y JSX (React)
 
 Gracias por verlo! :)
 
-(Faltan estilos)
