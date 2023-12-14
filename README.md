@@ -4,7 +4,7 @@ Es una página para buscar en qué escenas el actor Owen Wilson dijo su famoso "
 
 
 
-(http://bravocarmen.github.io/OwenWilson-BravoCarmen
+http://bravocarmen.github.io/OwenWilson-BravoCarmen
 
 
 ## Instalación
