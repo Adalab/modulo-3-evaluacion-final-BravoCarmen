@@ -4,18 +4,12 @@ Es una página para buscar en qué escenas el actor Owen Wilson dijo su famoso "
 
 
 
-http://beta.adalab.es/modulo-3-evaluacion-final-BravoCarmen/
+(http://bravocarmen.github.io/OwenWilson-BravoCarmen
 
 
 ## Instalación
 
 Puedes instalarte mi proyecto clonando mi repositorio. Usa npm run dev para arrancarlo.
-
-
-
-## Documentación
-
-[Adalab](https://adalab.es/) y materiales del curso.
 
 
 ## Construído con
